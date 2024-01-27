@@ -17,13 +17,14 @@ import {
 } from "@/components/ui/tabs";
 import { Textarea } from "./components/ui/textarea";
 
-import Navbar from "@/components/ui/navbar";
+import Navbar from "@/components/ui/Navbar";
 
 function App() {
   return (
     <>
     <Navbar />
-    <div className="bg-gray-800 min-h-screen flex flex-col items-center justify-center text-white">
+    <div className="bg-gray-800 min-h-screen flex flex-col items-center text-white">
+    <h1 className="text-4xl font-semibold mt-10">Turn your business call into your next investment</h1>
       <div className='p-10 flex text-center flex-col items-center'>
         <Tabs defaultValue="account" className="w-[400px]">
           <TabsList className="grid w-full grid-cols-2">
