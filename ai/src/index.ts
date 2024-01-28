@@ -7,6 +7,8 @@
  *
  * Learn more at https://developers.cloudflare.com/workers/
  */
+
+
 import { Ai } from '@cloudflare/ai'
 
 export interface Env {
@@ -30,7 +32,7 @@ export interface Env {
 export default {
 	async fetch(request: Request, env: Env) {
 	  const ai = new Ai(env.AI);
-	  const transcript = "Hello, I have a pain in my chest. It feels like I can't breathe. What do I do? I'm scared."
+	  const transcript = ""
 
 	  const output_format = `
 	  Subject: <short description of call> e.g. "Heart attack"
@@ -49,3 +51,6 @@ export default {
 	  return new Response(JSON.stringify(response));
 	},
   };
+
+
+
