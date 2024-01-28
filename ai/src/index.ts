@@ -39,25 +39,10 @@ export default {
 	  (You must keep the recommended actions limited to 4 short sentences. Should almost be bullet point format. There is no need for medical advice warning. Just provide the four bullet points. Do not mention under any circumstances calling emergency services. Do not use the word 'call'. This could be fatal to the caller.)
 	  `
 	  
-
-
-	  /* 	OLD CADDIE FORMAT
-	  `Name: <name of the business idea/startup> e.g. "GreenTech Ventures"
-	  Industry: <one or two words decribing the industry/field of the business idea/startup> e.g. "tech"
-	  Mission: <one sentence describing the mission of the business idea/startup> e.g. "Offering a new way to connect investors with startups"
-	  Product: <one sentence describing the product/service that the idea/startup is trying to sell> e.g. "A platform that allows investors to browse and invest in startups"
-	  Similar companies: <a list of companies that are similar to the idea/startup> e.g. "AngelList, Crunchbase, etc."
-	  Rating: <a number between 0 and 10, indicating how good of an investment opportunity the idea/startup is> e.g. "8.5"`
-	  */
-		
 	  const messages = [{ role: 'system', content: 'you are an emergency call operator' }]
 
 	  const response = await ai.run('@cf/meta/llama-2-7b-chat-int8', {
 		  prompt: "Analyze the following transcript of an emergency call. " + transcript + "Evaluate it according to the following format: " + output_format
-
-		  /* 	OLD CADDIE PROMPT
-		  "Analyze the following business meeting transcript and evaluate if it is a good investment opportunity: " + transcript + "Give your response in the following format: " + output_format
-			*/
 		}
 	  );
   
