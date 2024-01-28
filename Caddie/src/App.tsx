@@ -178,7 +178,9 @@ function App() {
         });
   };
 
-  const sendAudioChunk = (audioBlob: Blob) => {
+  const sendAudioChunk = (
+    audioBlob: Blob
+  ) => {
     const formData = new FormData();
     formData.append('audio', audioBlob, 'chunk.wav');
 
@@ -194,17 +196,7 @@ function App() {
       console.log('Transcription:', data.transcription);
     })
     .catch(error => console.error('Error sending audio chunk:', error));
-  };
-
-  
-  // if (loading) {
-  //   return (
-  //     <div className="bg-gray-800 min-h-screen flex flex-col items-center text-white">
-  //       <Progress value={progress} className="w-[60%]" />
-
-  //     </div>
-  //   );
-  // }
+  }
 
 
   return (

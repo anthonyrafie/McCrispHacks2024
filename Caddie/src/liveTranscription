@@ -1,5 +1,9 @@
 import { Ai } from "@cloudflare/ai";
 
+export interface Env {
+	AI: any;
+}
+
 export default {
   async fetch(request: { method: string; arrayBuffer: () => any; }, env: { AI: any; }) {
 
