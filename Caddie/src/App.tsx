@@ -294,7 +294,7 @@ function App() {
           </DrawerHeader> */}
           <div className="flex flex-row gap-x-[100px] items-center justify-center mt-10">
           <div className="flex-1  text-center">
-            <p className="text-2xl font-semibold">Call Transcript</p>
+            <p className="text-2xl font-semibold">Call Summary</p>
             <Textarea placeholder="Your live transcription will appear here..." className="text-black w-[400px] h-[200px]" />
           </div>
           <div className="flex-1 text-center">
