@@ -6,7 +6,8 @@ export interface Env {
 
 export default {
   async fetch(request: Request, env: Env) {
-    const res: any = await fetch("https://github.com/anthonyrafie/McCrispHacks2024/raw/zoom-transcript/Recording.wav");
+    const res: any = await fetch("https://github.com/anthonyrafie/McCrispHacks2024/raw/zoom-transcript/recordings/Recording.wav");
+    
     const blob = await res.arrayBuffer();
 
     const ai = new Ai(env.AI);
